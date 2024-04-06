@@ -1,19 +1,23 @@
 # CFA Level 2 - November 2024
 
-
-## Introdution
-This project is create for my personal benefit. I am using this as a learning tool to learn about web development concepts and document them in a fun and creative way. Please feel free to use and comment or contribute.
-
-
-Check it out Live!
+## Check it out Live!
 https://goldendoggies.github.io/CFA_STUDY_2024/
 
 
+## Introduction
+I built this for my own benefit. This is a learning tool for web development concepts and a fun and creative way to document progress.
+
+Please feel free to clone/fork, comment or contribute.
+
+
+## Screenshots
 Here are a few screenshots of the current state.
 
+Homepage
 
+Progress 
 
-homepage
+Example notes
 
 
 ## Technologies
@@ -24,23 +28,24 @@ homepage
 
 ## Tools
 1. Visual Studio Code
-2. Git and GitHub
-3. UNIX Terminal
+2. Git
+3. GitHub
+4. UNIX Terminal (Mac)
 
 
 ## Installation
+Use the 'git clone' feature to pull this repository from github and install it on your local machine.
+Then change directory 'cd' to the main project directory, whereever you cloned it.
 
-Use the git clone feature to pull this repository from github and install it on your local machine.
-Then cd to the main directory
+
+Hint: In terminal, cd to the location you prefer before issuing the git clone command, such as 'repos'. 
 
 ```bash
-
 $ git clone git@github.com:goldendoggies/CFA_STUDY_2024.git
 $ cd CFA_STUDY_2024
 ```
-//
 
-Open the index.html file. This should open a browser window on your default web browser and take you to a local instance of the webpage.
+From terminal, open the index.html file. This should open a browser window on your default web browser and take you to a local instance of the webpage.
 
 ```bash
 $ open ./index.html
@@ -52,22 +57,23 @@ Enjoy!
 
 ##  Other items to create in the future:
 
-1. [X] Links to other recipes/home
-2. [X] Images of my recipes
-3. [X] Add CSS to images and text on my recipe pages.
-4. [X] Access this project via Replit
-5. [X] Learn Markup for README.md file
-6. [X] Build in the Landing Page project into this recipes project
-7. [ ] Check buttons and a JS script to tell me 'good job' once all steps have been  completed
-8. [X] Add standard documentation on how to clone and run repository on local machine
+1. [X] Access this project via Replit
+2. [X] Learn Markup for README.md file
+3. [X] Add standard documentation on how to clone and run repository on local machine
+4. [X] Links to all home/progress/notes pages
+5. [X] Build in the 'Landing Page' project from ODIN project into this project
+6. [ ] Images of my original notes from GOODNOTES app.
+7. [ ] Add CSS to images and text on my notes pages.
+10. [ ] Check buttons and a JS script to tell me 'good job' once all steps have been completed
+11. [ ] Add CSS/JS to hover over parts of table cells/rows/columns as it pertains to the notes. (dynamic /click/hovering/highlighting)
 
  
 # Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For any major changes, please open an issue first to discuss what you would like to change/add/remove. Contributors are more than welcome!
 
 Please make sure to update tests as appropriate.
 
-#License
+# License
 
-MIT
+MIT License
