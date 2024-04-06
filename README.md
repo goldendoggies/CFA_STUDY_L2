@@ -1,7 +1,7 @@
-#CFA Level 2 - November 2024
+# CFA Level 2 - November 2024
 
 
-##Introdution
+## Introdution
 This project is create for my personal benefit. I am using this as a learning tool to learn about web development concepts and document them in a fun and creative way. Please feel free to use and comment or contribute.
 
 
@@ -28,7 +28,7 @@ homepage
 3. UNIX Terminal
 
 
-##Installation
+## Installation
 
 Use the git clone feature to pull this repository from github and install it on your local machine.
 Then cd to the main directory
@@ -46,7 +46,7 @@ Open the index.html file. This should open a browser window on your default web 
 $ open ./index.html
 ```
 
-##Usage
+##  Usage
 
 Enjoy!
 
@@ -62,12 +62,12 @@ Enjoy!
 8. [X] Add standard documentation on how to clone and run repository on local machine
 
  
-Contributing
+# Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-License
+#License
 
 MIT
