@@ -50,6 +50,7 @@ a {
   padding: 100px 200px;
 }
 
+
 .hero-left {
   flex: 1;
 }
@@ -90,10 +91,31 @@ button.hero-signup {
   width: 500px;
 }
 
+.full-img {
+  flex: 1;
+  width: 100%;;
+}
+
+.information2 {
+  background-color: #1F2937;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 200px;
+}
+
 .information-title {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #1F2937;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 50px;
+}
+
+.information2-title {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #F9FAF9;
   font-size: 36px;
   font-weight: 700;
   padding: 50px;
@@ -106,6 +128,34 @@ button.hero-signup {
   text-align: center;
   gap: 50px;
   margin-bottom: 100px;
+}
+
+.information2-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.info-sub-text {
+  font-family: 'Roboto', sans-serif;
+  color: #1F2937;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: Thin;
+  padding-bottom: 8px;
+  width: 450px;
+}
+.info2-sub-text {
+  font-family: 'Roboto', sans-serif;
+  color: #F9FAF9;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: Thin;
+  padding-bottom: 8px;
+  width: 450px;
 }
 
 .info-item {
@@ -126,11 +176,21 @@ button.hero-signup {
 
 }
 
-.quote {
-  display: flex;
-  background-color: #E5E7EB;
-  align-items: center;
-  justify-content: center;
+.info2-text {
+  font-family: 'Roboto', sans-serif;
+  color: #F9FAF9;
+  font-size: 18px;
+
+}
+
+.grid-layout {
+  width: 1366px;
+  height: 768px;
+
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
 }
 
 .quote-container{
