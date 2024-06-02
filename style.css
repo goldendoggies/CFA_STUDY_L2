@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap');
-
 @import url('https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css');
 @import url('https://cdn.datatables.net/select/1.7.0/css/select.dataTables.min.css');
 
@@ -55,6 +54,18 @@ a {
   flex: 1;
 }
 
+.table{
+  /* table-layout: auto; */
+  max-width:100%;
+  white-space:nowrap;
+  border: 1px solid #000;
+}
+td,
+tr,
+th{
+  border: 1px solid #000;
+}
+
 .hero-main-text {
   font-family: 'Roboto', sans-serif;
   color: #F9FAF9;
@@ -69,7 +80,7 @@ a {
   font-weight: 300;
   font-style: Thin;
   padding-bottom: 8px;
-  width: 450px;
+  width: 425px;
 }
 
 button.hero-signup {
@@ -89,11 +100,12 @@ button.hero-signup {
 .hero-img {
   flex: 1;
   width: 500px;
+  margin-bottom: 100px;
 }
 
 .full-img {
-  flex: 1;
-  width: 100%;;
+  /* flex: 1; */
+  width: 50vh;;
 }
 
 .information2 {
@@ -125,9 +137,10 @@ button.hero-signup {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   gap: 50px;
   margin-bottom: 100px;
+  /* outline: 2px solid red; */
 }
 
 .information2-container {
@@ -136,7 +149,18 @@ button.hero-signup {
   align-items: center;
   text-align: center;
   gap: 50px;
+  margin-bottom: 100px; 
+  /* outline: 2px solid red; */
+}
+
+.information3-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* gap: 50px; */
   margin-bottom: 100px;
+  /* outline: 2px solid red; */
 }
 
 .info-sub-text {
@@ -148,6 +172,28 @@ button.hero-signup {
   padding-bottom: 8px;
   width: 450px;
 }
+
+.info-main-text {
+  font-family: 'Roboto', sans-serif;
+  color: #1F2937;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: Thin;
+  padding-bottom: 8px;
+  width: 1000px;
+}
+
+.info2-main-text {
+  font-family: 'Roboto', sans-serif;
+  color: #F9FAF9;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: Thin;
+  padding-bottom: 8px;
+  width: 1000px;
+}
+
+
 .info2-sub-text {
   font-family: 'Roboto', sans-serif;
   color: #F9FAF9;
@@ -160,6 +206,11 @@ button.hero-signup {
 
 .info-item {
  max-width: 165px;
+}
+
+.no-bullets, .no-bullets li {
+    list-style-type:none;
+
 }
 
 .info-img {
