@@ -1,519 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quant</title>
-  <link rel="stylesheet" href="../style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+    <title>Quant</title>
+
+
+
 </head>
-
 <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" id="top" style="background-color: #1F2937;">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#">CFA Level 2 - 2025</a>
+
+            <button class="btn justify-content-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Content</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-light">
+                    <a class="nav-link" style="color: black" href="../index.html">Home</a>
+                    <a class="nav-link" style="color: black" href="progress.html">Progress</a>
+                    <hr>
+                    <a class="nav-link" style="color: black" href="ethics.html">Ethics</a>
+                    <a class="nav-link" style="color: black" href="quant.html">Quantitative Methods</a>
+                    <a class="nav-link" style="color: black" href="economics.html">Economics</a>
+                    <a class="nav-link" style="color: black" href="financialreporting.html">Financial Reporting</a>
+                    <a class="nav-link" style="color: black" href="corp.html">Corporate Finance</a>
+                    <a class="nav-link" style="color: black" href="equity.html">Equity Investments</a>
+                    <a class="nav-link" style="color: black" href="fixedincome.html">Fixed Income</a>
+                    <a class="nav-link" style="color: black" href="derivatives.html">Derivatives</a>
+                    <a class="nav-link" style="color: black" href="alternatives.html">Alternative Investments</a>
+                    <a class="nav-link" style="color: black" href="portfoliomanagement.html">Portfolio Management</a>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+      
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="container-fluid" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg">
+                    <p class="h1">Quantitative Methods</p>
+                    <p class="h3">This topic has been divided up several sections.</p>
+                    <div class="list-group">
+                        <a href="#multiple" class="list-group-item list-group-item-action">Multiple Variable Regression and Assumptions</a>
+                        <a href="#regression" class="list-group-item list-group-item-action">Regression Model Fit and Results</a>
+                        <a href="#misspecification" class="list-group-item list-group-item-action">Model Misspecification</a>
+                        <a href="#extensions" class="list-group-item list-group-item-action">Extensions of Multiple Regression</a>
+                        <a href="#time" class="list-group-item list-group-item-action">Time Series Analysis</a>
+                        <a href="#machine" class="list-group-item list-group-item-action">Machine Learning</a>
+                        <a href="#big" class="list-group-item list-group-item-action">Big Data</a>
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <img src="/images/quant.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid" id="multiple" style="height: 100vh;">
+        <div class="container py-5"  style="  height: 100%;">
+            <div  style="height: 95%;">
+                <p class="h2 d-flex justify-content-center">Multiple Variable Regression and Assumptions</p>
+                <p>Here are some intial notes from the material.</p>
+                <ul>
+                    <li>Working with multiple regression is simple. <strong>Find the independent variables that describe and affect the dependent variable</strong></li>
+                    <li>How do the well do the independed variables you selected describe affect the dependent variable?</li>
+                    <ul>
+                        <li>Are they significant?</li>
+                        <li>Do they all have the same effect? Which are stronger?</li>
+                        <li>What affects do each independent variables have on each other?</li>
+                        <li>Do you need to add more? Or eliminate any varaible? How would you know?</li>
+                    </ul>
+                    <li>What types of tests would you run to determine the independent variable's usefulness?</li>
+                    <ul>
+                        <li>F test? Model as a whole?</li>
+                        <li>Whole model? </li>
+                        <li>Restricted Model?</li>
+                    </ul>
+                </ul>  
+            </div>
+            <div class="d-flex justify-content-center"  style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="regression" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5"  style="height: 100%;">
+            <div  style="height: 95%;">
+                <p class="h2 d-flex justify-content-center">Regression Model Fit and Results</p>
+            </div>
+            <div class="d-flex justify-content-center"  style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="misspecification" style="height: 100vh;">
+        <div class="container py-5"  style="  height: 100%;">
+            <div  style="  height: 95%;">
+                <p class="h2 d-flex justify-content-center">Model Misspecification</p>
+            </div>
+            <div class="d-flex justify-content-center"  style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="extensions" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5" style="  height: 100%;">
+            <div style="  height: 95%;">
+                <p class="h2 d-flex justify-content-center">Extensions of Multiple Regression</p>
+            </div>
+            <div class="d-flex justify-content-center" style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="time" style="height: 100vh;">
+        <div class="container py-5" style="  height: 100%;">
+            <div style="  height: 95%;">
+                <p class="h2 d-flex justify-content-center">Time Series Analysis</p>
+            </div>
+            <div class="d-flex justify-content-center" style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="machine" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5" style="  height: 100%;">
+            <div style="  height: 95%;">
+                <p class="h2 d-flex justify-content-center">Machine Learning</p>
+            </div>
+            <div class="d-flex justify-content-center" style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container-fluid" id="big" style="height: 100vh;
+    border-style: solid; 
+    border-color: red; 
+    border-width: 5px;">
+
+
+
+    <div class="container py-5" style="  height: 100%;
+    border-style: solid; 
+    border-color: green; 
+    border-width: 5px;">
+
+
+
+    <div  style="  height: 95%;
+    border-style: solid; 
+    border-color: rgb(60, 16, 238); 
+    border-width: 5px;">
+       
+       <p class="h2 d-flex justify-content-center"  style="
+        border-style: solid; 
+        border-color: purple; 
+        border-width: 5px;">Big Data</p>
+
+</div>
+        <div class="d-flex justify-content-center"  style=" height:10%;
+        border-style: solid; 
+        border-color: brown; 
+        border-width: 5px;">
+            <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;
+            
+        border-style: solid; 
+        border-color: rgb(212, 174, 36); 
+        border-width: 5px;"
+        >^</a>
+            </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<nav class="navbar sticky-bottom navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+      <a class="navbar-brand" href="#">CFA Level 2 - 2025</a>
     </div>
   </nav>
 
 
 
-
-
-
-
-
-
-
-  
-
-  <div class="header">
-    <div class="header-left">
-      <div class="header-logo">
-        CFA Level 2 - November 2025
-      </div>
-    </div>
-    <div class="header-right navbar">
-
-      <div class="navbar">
-        <a href="../index.html">Home</a>
-        <a href="progress.html">Progress</a>
-        <div class="dropdown">
-          <button class="dropbtn">Content
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="ethics.html">Ethics</a>
-            <a href="quant.html">Quantitative Methods</a>
-            <a href="economics.html">Economics</a>
-            <a href="financialreporting.html">Financial Reporting</a>
-            <a href="corp.html">Corporate Finance</a>
-            <a href="equity.html">Equity Investments</a>
-            <a href="fixedincome.html">Fixed Income</a>
-            <a href="derivatives.html">Derivatives</a>
-            <a href="alternatives.html">Alternative Investments</a>
-            <a href="portfoliomanagement.html">Portfolio Management</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-  <div class="hero">
-    <div class="hero-left">
-      <div class="hero-main-text">Quant </div>
-      <div class="hero-sub-text">This topic has been divided up several sections. 
-        <ul> 
-          <li>Multiple Variable Regression and Assumptions</li>
-          <li>Regression Model Fit and Results</li>
-          <li>Model Misspecification</li>
-          <li>Extensions of Multiple Regression</li>
-          <li>Time Series Analysis</li>
-          <li>Machine Learning</li>
-          <li>Big Data</li>
-        </ul>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="./images/logo.png" alt="" class="hero-img">
-    </div>
-  </div>
-
-
-
-
-
-  <div class="container-fluid my-5" style="height: 500px;">
-
-    <div class="container">
-
-
-
-      <p class="h2 d-flex justify-content-center">Multiple Variable Regression and Assumptions</p>
-
-
-
-        <p>First steps back to getting to dev of this site. Get bootstrap to take on most of the formatting.</p>
-
-
-        <ul>
-          <li>Working with multiple regression is simple. <strong>Find the independent variables that describe and affect the dependent variable</strong></li>
-          <li>How do the well do the independed variables you selected describe affect the dependent variable?</li>
-          <ul>
-            <li>Are they significant?</li>
-            <li>Do they all have the same effect? Which are stronger?</li>
-            <li>What affects do each independent variables have on each other?</li>
-            <li>Do you need to add more? Or eliminate any varaible? How would you know?</li>
-          </ul>
-          <li>What types of tests would you run to determine the independent variable's usefulness?</li>
-          <ul>
-            <li>F test? Model as a whole?</li>
-              <li>Whole model? </li>
-              <li>Restricted Model?</li>
-          </ul>
-        </ul>
-
-
-
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="table-danger">
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td class="table-secondary">Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-
-
-
-        
-    </div>
-    
-    </div>
-    
-
-    
-
-<div class="container-fluid" style="color: white; background-color: #1F2937; height: 500px;">
-
-  <div class="container">
-
-    <p class="h2 d-flex justify-content-center">Multiple Variable Regression and Assumptions</p>
-
-    <table class="table table-secondary">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="table-danger">
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td class="table-secondary">Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
-    
-</div>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="information">
-    <div class="information-title">Multiple Variable Regression and Assumptions</div>
-    <div class="information-container">
-
-
-      <table>
-        <tr>
-          <td>
-            <p class="info-sub-text"><b>Investment problems for multiple regression</b></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="info-sub-text">Use sample data to make infrences about a population</p>
-            <ul>
-              <li class="info-sub-text">Relationships between a dependent variable and one or more independent variables</li>
-              <li class="info-sub-text">Relationships between a single group or multiple groups</li>
-              <li class="info-sub-text">Relationships between a single group before and after a change</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://www.w3schools.com/statistics/statistics_statistical_inference.php" 
-              class="info-sub-text">
-              Statistics - Statistical Inference
-            </a>
-          </td>
-        </tr>
-      </table>
-
-
-
-      <table>
-        <tr>
-          <td>
-            <p class="info-sub-text"><b>Investment problems for multiple regression</b></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="info-sub-text">Use sample data to make infrences about a population</p>
-            <ul>
-              <li class="info-sub-text">Relationships between a dependent variable and one or more independent variables</li>
-              <li class="info-sub-text">Relationships between a single group or multiple groups</li>
-              <li class="info-sub-text">Relationships between a single group before and after a change</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://www.w3schools.com/statistics/statistics_statistical_inference.php" 
-              class="info-sub-text">
-              Statistics - Statistical Inference
-            </a>
-          </td>
-        </tr>
-      </table>
-
-
-
-      <table>
-        <tr>
-          <td>
-            <p class="info-sub-text"><b>Mulitple Linear Regression Model</b></p>
-          </td>
-        </tr>
-        <tr>
-        <tr>
-          <td>
-            <p class="info-sub-text">Y = Bo + BiXi + e</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="info-sub-text"><b>Relation between Dependent and Independent Variables</b></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <ul class="no-bullets"> 
-              <li class="info-sub-text">Y = dependent variable</li>
-              <li class="info-sub-text">Bo = slope intercept</li>
-              <li class="info-sub-text">Bi = regression coefficient</li>
-              <li class="info-sub-text">Xi = independent variable</li>
-              <li class="info-sub-text">e = unexplained error term</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="info-sub-text"><b>Interpret Estimated Regression Coefficents</b></p>
-          </td>
-        </tr>
-        
-      </table>
-
-    </div>
-  </div>
-
-
-  
-  
-  <div class="information2">
-    <div class="information2-title">Regression Model Fit and Results</div>
-    <div class="information2-container">
-
-
-      <!-- <p class="info2-sub-text">this is a space saver</p> -->
-
-
-      <section class="grid-layout">
-        <div class="info2-sub-text">1</div>
-        <div class="info2-sub-text">2</div>
-        <div class="info2-sub-text">3</div>
-        <div class="info2-sub-text">4</div>
-        <div class="info2-sub-text">5</div>
-        <div class="info2-sub-text">6</div>
-        <div class="info2-sub-text">7</div>
-        <div class="info2-sub-text">8</div>
-        <div class="info2-sub-text">9</div>
-        <div class="info2-sub-text">10</div>
-        <div class="info2-sub-text">11</div>
-        <div class="info2-sub-text">12</div>
-      </section>
-
-    </div>
-  </div>
-
-
-  <div class="information">
-    <div class="information-title">Model Misspecification</div>
-    <div class="information-container">
-
-
-    <div>
-      <table>
-
-
-        <tr><th>FIRST HEADING</th><th>SECOND HEADING</th><th>THIRD HEADING</th></tr>
-        <tr>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-        </tr>
-        <tr>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-        </tr>
-        <tr>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-          <td><p class="info-sub-text">this is a space saver</p></td>
-        </tr>
-        <!-- <tr>    
-          <div>
-            <p class="info-sub-text">this is a space saver for chart context</p>
-          </div>
-        </tr> -->
-      </table>
-    </div>
-    </div>
-  </div>
-
-  <div class="information2">
-    <div class="information2-title">Extensions of Multiple Regression</div>
-    <div class="information2-container">
-
-
-      <p class="info2-sub-text">this is a space saver</p>
-
-      <!-- https://stackoverflow.com/questions/12431339/how-to-write-equations-in-html -->
-      <div class="info2-sub-text">$$ \displaystyle s = \sqrt{\frac{\sum (x_{i}-\bar{x})^2}{n-1}} $$</div>
-
-      <!-- <div class="info2-sub-text">$$ \displaystyle \mu = \frac{\sum x_{i}}{n} = \frac{4 + 11 + 7 + 14}{4} = \frac{36}{4} = \underline{9} $$</div -->
-
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
-
-    </div>
-  </div>
-
-
-  <div class="information">
-    <div class="information-title">Time Series Analysis</div>
-    <div class="information-container">
-
-
-      <p class="info-sub-text">this is a space saver</p>
-
-
-    </div>
-  </div>
-
-
-
-  <div class="information2">
-    <div class="information2-title">Machine Learning</div>
-    <div class="information2-container">
-
-      <table>
-        <tr>
-          <td>
-            <div>
-              <img src="../images/machinelearning.jpg" alt="" class="hero-img">
-            </div>
-          </td>
-
-        </tr>
-        
-        
-        <tr>
-          <td><p class="info2-main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla, arcu nec iaculis posuere, diam magna scelerisque nunc, quis dictum metus enim et risus. Aliquam sagittis a mauris sit amet molestie. Pellentesque vulputate lobortis mi luctus luctus. Donec ut consectetur sapien, non viverra massa. Aliquam dapibus et sapien quis egestas. Maecenas tristique justo nisl. Praesent nec quam nec turpis porttitor maximus at nec lorem. Aliquam venenatis enim vitae eleifend lacinia. Ut eu velit at magna mollis maximus. Etiam tellus leo, venenatis eu rutrum at, faucibus nec mi.</p>
-          </td>
-        </tr>
-
-
-
-
-
-
-        
-        <tr>
-          <td><p class="info2-main-text">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In imperdiet erat sed molestie commodo. Cras sed tempor felis. Duis ut eros vitae velit tristique imperdiet vel sed sem. Aliquam facilisis ultricies dignissim. Nunc hendrerit convallis libero et pretium. Curabitur pharetra eleifend malesuada. Curabitur pulvinar et tortor eu suscipit. Praesent laoreet felis ex. Nam sit amet efficitur eros.</p>
-          </td>
-        </tr>
-        <tr>
-          <td><p class="info2-main-text">Vestibulum eu placerat dui. In dignissim nisl id metus vehicula accumsan id eu sem. Ut eget sem id nulla pharetra ultricies ac euismod ipsum. Quisque purus lectus, malesuada feugiat nulla nec, luctus placerat dolor. Vestibulum aliquet sapien urna, a facilisis urna sollicitudin sit amet. Duis suscipit erat nec ex sagittis, non tempor velit dignissim. Nullam pretium nec metus a ultricies. Proin ac erat venenatis, aliquet ex non, porttitor urna. Integer leo metus, varius vitae consectetur vitae, volutpat non enim. Suspendisse eu fermentum augue. Etiam fermentum aliquam est. Maecenas nunc sapien, mollis et odio nec, semper sodales augue. In placerat neque sed porttitor faucibus. Nunc vulputate posuere nisi, id vehicula lorem dapibus vitae. Duis laoreet erat ut augue interdum, et hendrerit lorem dapibus.</p>
-          </td>
-        </tr>
-      </table>
-
-      
-    </div>
-  </div>
-
-
-
-  <div class="information">
-    <div class="information-title">Big Data</div>
-    <div class="information-container">
-
-
-      <table>
-        <tr>
-          <td><p class="info-main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla, arcu nec iaculis posuere, diam magna scelerisque nunc, quis dictum metus enim et risus. Aliquam sagittis a mauris sit amet molestie. Pellentesque vulputate lobortis mi luctus luctus. Donec ut consectetur sapien, non viverra massa. Aliquam dapibus et sapien quis egestas. Maecenas tristique justo nisl. Praesent nec quam nec turpis porttitor maximus at nec lorem. Aliquam venenatis enim vitae eleifend lacinia. Ut eu velit at magna mollis maximus. Etiam tellus leo, venenatis eu rutrum at, faucibus nec mi.</p>
-          </td>
-        </tr>
-        <tr>
-          <td><p class="info-main-text">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In imperdiet erat sed molestie commodo. Cras sed tempor felis. Duis ut eros vitae velit tristique imperdiet vel sed sem. Aliquam facilisis ultricies dignissim. Nunc hendrerit convallis libero et pretium. Curabitur pharetra eleifend malesuada. Curabitur pulvinar et tortor eu suscipit. Praesent laoreet felis ex. Nam sit amet efficitur eros.</p>
-          </td>
-        </tr>
-        <tr>
-          <td><p class="info-main-text">Vestibulum eu placerat dui. In dignissim nisl id metus vehicula accumsan id eu sem. Ut eget sem id nulla pharetra ultricies ac euismod ipsum. Quisque purus lectus, malesuada feugiat nulla nec, luctus placerat dolor. Vestibulum aliquet sapien urna, a facilisis urna sollicitudin sit amet. Duis suscipit erat nec ex sagittis, non tempor velit dignissim. Nullam pretium nec metus a ultricies. Proin ac erat venenatis, aliquet ex non, porttitor urna. Integer leo metus, varius vitae consectetur vitae, volutpat non enim. Suspendisse eu fermentum augue. Etiam fermentum aliquam est. Maecenas nunc sapien, mollis et odio nec, semper sodales augue. In placerat neque sed porttitor faucibus. Nunc vulputate posuere nisi, id vehicula lorem dapibus vitae. Duis laoreet erat ut augue interdum, et hendrerit lorem dapibus.</p>
-          </td>
-        </tr>
-      </table>
-
-
-    </div>
-  </div>
-
-  
-  <div class="footer">
-    <div class="footer-link">
-      <a href="https://github.com/goldendoggies">Copyright © goldendoggies - The Odin Project 2025</a>
-    </div>
-  </div>
-
 </body>
-
 </html>

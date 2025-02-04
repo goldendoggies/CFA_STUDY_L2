@@ -1,180 +1,240 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fixed Income</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+    <title>Fixed Income</title>
+
+
+
 </head>
 <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" id="top" style="background-color: #1F2937;">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#">CFA Level 2 - 2025</a>
 
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="btn justify-content-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
+            </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Content</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-light">
+                    <a class="nav-link" style="color: black" href="../index.html">Home</a>
+                    <a class="nav-link" style="color: black" href="progress.html">Progress</a>
+                    <hr>
+                    <a class="nav-link" style="color: black" href="ethics.html">Ethics</a>
+                    <a class="nav-link" style="color: black" href="quant.html">Quantitative Methods</a>
+                    <a class="nav-link" style="color: black" href="economics.html">Economics</a>
+                    <a class="nav-link" style="color: black" href="financialreporting.html">Financial Reporting</a>
+                    <a class="nav-link" style="color: black" href="corp.html">Corporate Finance</a>
+                    <a class="nav-link" style="color: black" href="equity.html">Equity Investments</a>
+                    <a class="nav-link" style="color: black" href="fixedincome.html">Fixed Income</a>
+                    <a class="nav-link" style="color: black" href="derivatives.html">Derivatives</a>
+                    <a class="nav-link" style="color: black" href="alternatives.html">Alternative Investments</a>
+                    <a class="nav-link" style="color: black" href="portfoliomanagement.html">Portfolio Management</a>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+      
+
+
+
+    <div class="container-fluid" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg">
+                    <p class="h1">Fixed Income Investments</p>
+                    <p class="h3">This topic has been divided up several sections.</p>
+                    <div class="list-group">
+                        <a href="#termstructure" class="list-group-item list-group-item-action">Term Structure and Interest Rate Dynamics</a>
+                        <a href="#arbitrage" class="list-group-item list-group-item-action">Arbitrage-Free Valuation Framework</a>
+                        <a href="#options" class="list-group-item list-group-item-action">Valuation and Analysis of Bonds with Embedded Options</a>
+                        <a href="#credit" class="list-group-item list-group-item-action">Credit Analysis Models</a>
+                        <a href="#cds" class="list-group-item list-group-item-action">Credit Default Swaps</a>
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <img src="/images/financialreporting.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid" id="termstructure" style="height: auto;">
+        <div class="container py-5"  style="  height: 100%;">
+            <div  style="height: 95%;">
+                <p class="h2 d-flex justify-content-center">Term Structure and Interest Rate Dynamics</p>
+              
+
+                <div class="row">
+                  <div class="col-lg">
+                    <ul>
+                      <li>Forward Rate Model</li>
+                      <li>Forward Pricing Model</li>
+                      <li>Spot Rate</li>
+                      <li>Par Rate</li>
+                      <li>Forward Rate</li>
+                      <li>Yield to Maturity</li>
+                      <li>Expected Rate of Return</li>
+                      <li>Shape of Yield Curve</li>
+                    </ul>
+
+                    <ul>
+                      <li>How to get Zero-coupon rates from par curve (Bootstrapping)</li>
+                      <li>Spot Rates vs Forward Rates</li>
+                      <li>Rolling down the yield curve</li>
+                    </ul>
+
+                    <ul>
+                      <li>Swap Curve</li>
+                      <li>Swap Spread</li>
+                    </ul>
+
+
+                                    
+            <p>Term Structure of Interest Rates</p>
+            <ul>
+              <li>Pure Expectations Theory</li>
+              <li>Local Expectations Theory</li>
+              <li>Liquidity Preference Theory</li>
+              <li>Segmented Markets Theory</li>
+              <li>Preferred Habitat Theory</li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
 
 
 
-<div class="header">
-  <div class="header-left">
-    <div class="header-logo">
-        CFA Level 2 - November 2024
-    </div>
-  </div>
-  <div class="header-right navbar">
+                  </div>
+                  <div class="col-lg">
 
-    <div class="navbar">
-      <a href="../index.html">Home</a>
-      <a href="progress.html">Progress</a>
-      <div class="dropdown">
-        <button class="dropbtn">Content
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="ethics.html">Ethics</a>
-          <a href="quant.html">Quantitative Methods</a>
-          <a href="economics.html">Economics</a>
-          <a href="financialreporting.html">Financial Reporting</a>
-          <a href="corp.html">Corporate Finance</a>
-          <a href="equity.html">Equity Investments</a>
-          <a href="fixedincome.html">Fixed Income</a>
-          <a href="derivatives.html">Derivatives</a>
-          <a href="alternatives.html">Alternative Investments</a>
-          <a href="portfoliomanagement.html">Portfolio Management</a>
-        </div>
-      </div> 
-  </div>
-</div>
+                <ul>
+                  <li>Yield Curve Volatility</li>
+                  <li>Short term more volitile</li>
+                  <li>Key Rate Duration</li>
+                  <li>Multifactor volitility sensitivity</li>
+                </ul>
 
 
-  </div><div class="hero">
-    <div class="hero-left">
-        <div class="hero-main-text">Fixed Income </div>
-        <div class="hero-sub-text">This website is a free source of knowledge regarding the CFA Exams and my particular process in studing. If you notice anything incorrect or would like to contribute please leave a comment or issue on github with your feedback.</div>
-        <a href="https://github.com/goldendoggies"><button class="hero-signup">Sign up</button></a>
-    </div>
-    <div class="hero-right">
-        <img src="./images/logo.png" alt="" class="hero-img">
-    </div>
-</div>
-
-<div class="information">
-    <div class="information-title">Topics</div>
-    <div class="information-container">
-        <div class="info-item">
-            <img src="./images/ethics.jpg" alt="barberry" class="info-img">
-            <div class="info-text">Ethics</div>
-        </div>
-        <div class="info-item">
-            <img src="./images/quant.jpg" alt="chili" class="info-img">
-            <div class="info-text">Quantative Methods</div>
-        </div>
-        <div class="info-item">
-            <img src="./images/econ.jpg" alt="pepper" class="info-img">
-            <div class="info-text">Economics</div>
-        </div>
-        <div class="info-item">
-           <a href="notes/economics.html">
-<img src="./images/saffron.png" alt="saffron" class="info-img">
-            <div class="info-text">Economics</div>
-        </div></a>
-        <div class="info-item">
-            <img src="./images/financialreporting.jpg" alt="saffron" class="info-img">
-            <div class="info-text">Equity Assets</div>
-        </div>
-
-    </div>
+                <ul>
+                  <li>Level</li>
+                  <li>Steepness</li>
+                  <li>Curvature</li>
+                </ul>
 
 
+                <ul>Economic factors used for:
+                  <li>Benchmark rates</li>
+                  <li>Yield spreads</li> 
+                  <li>Yield Curve Changes</li>
+                </ul>
 
-  <div class="information-container">
-    <div class="info-item">
-        <img src="./images/barberry.png" alt="barberry" class="info-img">
-        <div class="info-text">Fixed Income</div>
-    </div>
-    <div class="info-item">
-        <img src="./images/chilli.png" alt="chili" class="info-img">
-        <div class="info-text">Derivatives</div>
-    </div>
-    <div class="info-item">
-        <img src="./images/pepper.png" alt="pepper" class="info-img">
-        <div class="info-text">Corporate Finance</div>
-    </div>
-    <div class="info-item">
-       <a href="notes/economics.html">
-  <img src="./images/saffron.png" alt="saffron" class="info-img">
-        <div class="info-text">Portfolio Management</div>
-    </div></a>
-    <div class="info-item">
-        <img src="./images/saffron.png" alt="saffron" class="info-img">
-        <div class="info-text">Alternative Assets</div>
-    </div>
+                <p>Risk and Volatility. Factors explaining variance of bond yields.</p>
+                <ul>
+                  <li>Short and Intermediate Term Rates</li>
+                    <ul><strong>- Accounting for (1/3)</strong>
+                      <li>Inflation</li>
+                      <li>GDP Growth</li>
+                    </ul>
+                    <ul><strong>- Accounting for (2/3)</strong>
+                      <li>(Uncertanty regarding) Monetary Policy</li>
+                    </ul>
 
-  </div>
-</div>
+                  <li>Long Term Rates
+                    <ul><strong>- Accounting for (1/3)</strong>
+                      <li>Monetary Policy</li>
 
-<div class="quote">
-    <div class="quote-container">
-        <h2 class="quote-text"> This is an inspiring quote or testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</h2>
-        <h2 class="quote-author"> -Thor, God of Thunder</h2>
-    </div>
-</div>
+                    </ul>
+                    <ul><strong>- Accounting for (2/3)</strong>
+                      <li>Inflation</li>
+                    </ul>
+                </ul>
+              </div>
 
-<div class="cta">
-    <div class="cta-container">
-        <div class="cta-left">
-            <div class="cta-main-text">Call to Action! It's time!</div>
-            <div class="cta-sub-text">Sign up for our product by clicking that button right over there!</div>
-        </div>
-        <div class="cta-right">
-            <a href="https://github.com/goldendoggies"><button class="cta-signup">Sign up</button></a>
+
+            </div>
+            <div class="d-flex justify-content-center"  style="  height: 5%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
         </div>
     </div>
-</div>
 
- <div class="footer">
-     <div class="footer-link">
-         <a href="https://github.com/goldendoggies">Copyright © goldendoggies - The Odin Project 2022</a>
-     </div>
- </div>
+
+    <div class="container-fluid" id="arbitrage" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5"  style="height: 100%;">
+            <div  style="height: 95%;">
+                <p class="h2 d-flex justify-content-center">Arbitrage-Free Valuation Framework</p>
+            </div>
+            <div class="d-flex justify-content-center"  style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="options" style="height: 100vh;">
+        <div class="container py-5"  style="  height: 100%;">
+            <div  style="  height: 95%;">
+                <p class="h2 d-flex justify-content-center">Valuation and Analysis of Bonds with Embedded Options</p>
+            </div>
+            <div class="d-flex justify-content-center"  style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="credit" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5" style="  height: 100%;">
+            <div style="  height: 95%;">
+                <p class="h2 d-flex justify-content-center">Credit Analysis Models</p>
+            </div>
+            <div class="d-flex justify-content-center" style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="cds" style="height: 100vh;">
+        <div class="container py-5" style="  height: 100%;">
+            <div style="  height: 95%;">
+                <p class="h2 d-flex justify-content-center">Credit Default Swaps</p>
+            </div>
+            <div class="d-flex justify-content-center" style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<nav class="navbar sticky-bottom navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CFA Level 2 - 2025</a>
+    </div>
+  </nav>
+
+
 
 </body>
 </html>
