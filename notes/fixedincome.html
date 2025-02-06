@@ -56,6 +56,7 @@
                 <div class="col-lg">
                     <p class="h1">Fixed Income Investments</p>
                     <p class="h3">This topic has been divided up several sections.</p>
+
                     <div class="list-group">
                         <a href="#termstructure" class="list-group-item list-group-item-action">Term Structure and Interest Rate Dynamics</a>
                         <a href="#arbitrage" class="list-group-item list-group-item-action">Arbitrage-Free Valuation Framework</a>
@@ -76,16 +77,14 @@
 
 
     <div class="container-fluid" id="termstructure" style="height: auto;">
-        <div class="container py-5"  style="  height: 100%;">
+        <div class="container py-5"  style="height: 100%;">
             <div  style="height: 95%;">
                 <p class="h2 d-flex justify-content-center">Term Structure and Interest Rate Dynamics</p>
-              
-
+                
+                
                 <div class="row">
                   <div class="col-lg">
-
-
-
+                
                     <ul>
                       <li type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Forward Rate Model</li>
                       <li>Forward Pricing Model</li>
@@ -96,31 +95,31 @@
                       <li>Expected Rate of Return</li>
                       <li>Shape of Yield Curve</li>
                     </ul>
-
+                
                     <ul>
                       <li>How to get Zero-coupon rates from par curve (Bootstrapping)</li>
                       <li>Spot Rates vs Forward Rates</li>
                       <li>Rolling down the yield curve</li>
                     </ul>
-
+                
                     <ul>
                       <li>Swap Curve</li>
                       <li>Swap Spread</li>
                     </ul>
-
-
-                                    
-            <p>Term Structure of Interest Rates</p>
-            <ul>
-              <li>Pure Expectations Theory</li>
-              <li>Local Expectations Theory</li>
-              <li>Liquidity Preference Theory</li>
-              <li>Segmented Markets Theory</li>
-              <li>Preferred Habitat Theory</li>
-            </ul>
-
-
-
+                
+                
+                
+                    <p>Term Structure of Interest Rates</p>
+                    <ul>
+                      <li>Pure Expectations Theory</li>
+                      <li>Local Expectations Theory</li>
+                      <li>Liquidity Preference Theory</li>
+                      <li>Segmented Markets Theory</li>
+                      <li>Preferred Habitat Theory</li>
+                    </ul>
+                
+                
+                
                   </div>
 
             <!-- Modal -->
@@ -142,54 +141,55 @@
             </div>
 
 
+            <div class="col-lg">
 
-                  <div class="col-lg">
+              <ul>
+                <li>Yield Curve Volatility</li>
+                <li>Short term more volitile</li>
+                <li>Key Rate Duration</li>
+                <li>Multifactor volitility sensitivity</li>
+              </ul>
 
-                <ul>
-                  <li>Yield Curve Volatility</li>
-                  <li>Short term more volitile</li>
-                  <li>Key Rate Duration</li>
-                  <li>Multifactor volitility sensitivity</li>
+
+              <ul>
+                <li>Level</li>
+                <li>Steepness</li>
+                <li>Curvature</li>
+              </ul>
+
+
+              <ul>Economic factors used for:
+                <li>Benchmark rates</li>
+                <li>Yield spreads</li>
+                <li>Yield Curve Changes</li>
+              </ul>
+
+              <p>Risk and Volatility. Factors explaining variance of bond yields.</p>
+              <ul>
+                <li>Short and Intermediate Term Rates</li>
+                <ul><strong>- Accounting for (1/3)</strong>
+                  <li>Inflation</li>
+                  <li>GDP Growth</li>
+                </ul>
+                <ul><strong>- Accounting for (2/3)</strong>
+                  <li>(Uncertanty regarding) Monetary Policy</li>
                 </ul>
 
+                <li>Long Term Rates
+                  <ul><strong>- Accounting for (1/3)</strong>
+                    <li>Monetary Policy</li>
 
-                <ul>
-                  <li>Level</li>
-                  <li>Steepness</li>
-                  <li>Curvature</li>
-                </ul>
-
-
-                <ul>Economic factors used for:
-                  <li>Benchmark rates</li>
-                  <li>Yield spreads</li> 
-                  <li>Yield Curve Changes</li>
-                </ul>
-
-                <p>Risk and Volatility. Factors explaining variance of bond yields.</p>
-                <ul>
-                  <li>Short and Intermediate Term Rates</li>
-                    <ul><strong>- Accounting for (1/3)</strong>
-                      <li>Inflation</li>
-                      <li>GDP Growth</li>
-                    </ul>
-                    <ul><strong>- Accounting for (2/3)</strong>
-                      <li>(Uncertanty regarding) Monetary Policy</li>
-                    </ul>
-
-                  <li>Long Term Rates
-                    <ul><strong>- Accounting for (1/3)</strong>
-                      <li>Monetary Policy</li>
-
-                    </ul>
-                    <ul><strong>- Accounting for (2/3)</strong>
-                      <li>Inflation</li>
-                    </ul>
-                </ul>
-              </div>
+                  </ul>
+                  <ul><strong>- Accounting for (2/3)</strong>
+                    <li>Inflation</li>
+                  </ul>
+              </ul>
+            </div>
 
 
             </div>
+            </div>
+            
             <div class="d-flex justify-content-center"  style="  height: 5%;">
                 <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
             </div>
@@ -221,11 +221,66 @@
     </div>
 
 
-    <div class="container-fluid" id="credit" style="color: white; background-color: #1F2937; height: 100vh;">
+    <div class="container-fluid" id="credit" style="color: white; background-color: #1F2937; height: auto;">
         <div class="container py-5" style="  height: 100%;">
-            <div style="  height: 95%;">
+            <div style="height: 95%;">
                 <p class="h2 d-flex justify-content-center">Credit Analysis Models</p>
-            </div>
+                
+                <p>The Credit Valuation Adjustment is used to determine the adjustment for credit risk (Credit Spread)</p>
+                <ul>
+                  <li><strong>Expected exposure</strong> (Amount that could be lost in default without considering any recovery)</li>
+                  <li>Credit Spread (G-spread) which is Corporate minus Govt (or benchmark) bond</li>
+                  <li>Default Risk (Probability of Default - POD)</li>
+                  <li>Default Risk Premium (Uncertainty of timing of default)</li>
+                  <li>Credit Risk (If default, how much is lost? - Loss Given Default LGD)</li>
+                  <li>Recovery Rate (% recovered after default)</li>
+                  <li>Loss severity (1-recovery rate)</li>
+                
+                  <li><strong>Loss given default</strong></li>
+                  <li><strong>Probability of default</strong></li>
+                  <li><strong>Credit valuation adjustment</strong></li>
+                </ul>
+                
+                <p>Credit Ratings and Credit Scores</p>
+                <ul>
+                  <li>Credit Rating (Individuals, Small businesses)</li>
+                  <li>Credit Score (Larger Companies, Governments, etc)</li>
+                  <li>Expected return given changes in <strong>credit rating</strong></li>
+                </ul>
+                
+                <p>Corporate Credit Risk Models</p>
+                <ul>
+                  <li>Structural Model</li>
+                  <ul>
+                    <li>Assumptions</li>
+                    <li>Strengths</li>
+                    <li>Weaknesses</li>
+                  </ul>
+                
+                  <li>Reduced Form Model</li>
+                  <ul>
+                    <li>Assumptions</li>
+                    <li>Strengths</li>
+                    <li>Weaknesses</li>
+                  </ul>
+                </ul>
+                
+                
+                <p>CVA Summary</p>
+                <ul>
+                  <li>Calc Par >> Spot >> Forward Rates</li>
+                  <li>Construct Interest Rate Tree using forward rates</li>
+                  <li>Calc Bond value assuming no default</li>
+                  <li>Calc Expected Exposures (* 1- recovery rate) = LGD</li>
+                  <li>LGD = (POD * DFn)</li>
+                  <li>Calc Sum for CVA and subtract from bond assuming no default</li>
+                  <li>Calc YTM (using I, PMT, PV, FV) and subtract Govt</li>
+                  <li>Calc Credit Spread</li>
+                
+                </ul>
+                
+                
+              </div>
             <div class="d-flex justify-content-center" style="  height: 10%;">
                 <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
             </div>
