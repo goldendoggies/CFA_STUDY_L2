@@ -84,7 +84,7 @@
                 
                 <div class="row">
                   <div class="col-lg">
-                
+                `
                     <ul>
                       <li type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Forward Rate Model</li>
                       <li>Forward Pricing Model</li>
@@ -221,13 +221,68 @@
     </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
     <div class="container-fluid" id="credit" style="color: white; background-color: #1F2937; height: auto;">
         <div class="container py-5" style="  height: 100%;">
             <div style="height: 95%;">
                 <p class="h2 d-flex justify-content-center">Credit Analysis Models</p>
                 
+
+                <div class="row">
+                  <div class="col">
                 <p>The Credit Valuation Adjustment is used to determine the adjustment for credit risk (Credit Spread)</p>
                 <ul>
+                  
                   <li><strong>Expected exposure</strong> (Amount that could be lost in default without considering any recovery)</li>
                   <li>Credit Spread (G-spread) which is Corporate minus Govt (or benchmark) bond</li>
                   <li>Default Risk (Probability of Default - POD)</li>
@@ -235,10 +290,12 @@
                   <li>Credit Risk (If default, how much is lost? - Loss Given Default LGD)</li>
                   <li>Recovery Rate (% recovered after default)</li>
                   <li>Loss severity (1-recovery rate)</li>
-                
-                  <li><strong>Loss given default</strong></li>
+                  <li type="button" data-bs-toggle="modal" data-bs-target="#LGD"><strong>Loss given default</strong></li>
                   <li><strong>Probability of default</strong></li>
                   <li><strong>Credit valuation adjustment</strong></li>
+                  <li type="button" data-bs-toggle="modal" data-bs-target="#exploss">Expected loss</li>
+                  <li type="button" data-bs-toggle="modal" data-bs-target="#pvexploss">Present Value of the expected loss</li>
+
                 </ul>
                 
                 <p>Credit Ratings and Credit Scores</p>
@@ -264,8 +321,9 @@
                     <li>Weaknesses</li>
                   </ul>
                 </ul>
-                
-                
+              </div>
+
+                <div class="col">
                 <p>CVA Summary</p>
                 <ul>
                   <li>Calc Par >> Spot >> Forward Rates</li>
@@ -274,12 +332,13 @@
                   <li>Calc Expected Exposures (* 1- recovery rate) = LGD</li>
                   <li>LGD = (POD * DFn)</li>
                   <li>Calc Sum for CVA and subtract from bond assuming no default</li>
-                  <li>Calc YTM (using I, PMT, PV, FV) and subtract Govt</li>
+                  <li>Calc YTM (using I, PMT, PV, FV) and subtract Govt (benchmark) YTM</li>
                   <li>Calc Credit Spread</li>
                 
                 </ul>
                 
-                
+              </div>
+            </div>
               </div>
             <div class="d-flex justify-content-center" style="  height: 10%;">
                 <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
@@ -287,6 +346,122 @@
         </div>
     </div>
 
+
+
+
+            <!-- Modal expected loss-->
+            <div class="modal fade" id="pvexploss" tabindex="-1" aria-labelledby="pvexplossLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="pvexplossModalLabel">Present value of the expected loss</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ol>
+                      <li>
+                        <p>Loss given default (LGD) = Expected Exposure x (1 - recovery rate)</p>
+                      </li>
+                      <li>
+                        <p>Probability of Default (POD) at time T</p>
+                      </li>
+                      <li>
+                        <p>Expected Loss (at time T) = LGD X POD at time T / Divided by (1 + Risk Free Rate)^n</p>
+                      </li>
+                    </ol>Loss given default (LGD) = Expected Exposure x (1 - recovery rate)
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Present value of the expected loss-->
+            <div class="modal fade" id="exploss" tabindex="-1" aria-labelledby="explossLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="pvexplossModalLabel">Expected loss</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                        <p>Expected Loss (at time T) = LGD X POD at time T</p>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Loss Given Default-->
+            <div class="modal fade" id="LGD" tabindex="-1" aria-labelledby="LGDLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="LGDModalLabel">Loss Given Default</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Loss given default (LGD) = Expected Exposure x (1 - recovery rate)
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
 
     <div class="container-fluid" id="cds" style="height: 100vh;">
         <div class="container py-5" style="  height: 100%;">
