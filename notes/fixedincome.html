@@ -86,7 +86,7 @@
                   <div class="col-lg">
                 `
                     <ul>
-                      <li type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Forward Rate Model</li>
+                      <li type="button" data-bs-toggle="modal" data-bs-target="#forwardrate">Forward Rate Model</li>
                       <li>Forward Pricing Model</li>
                       <li>Spot Rate</li>
                       <li>Par Rate</li>
@@ -123,15 +123,20 @@
                   </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="forwardrate" tabindex="-1" aria-labelledby="forwardrateLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Forward Rate Model</h5>
+                    <h5 class="modal-title" id="forwardrateLabel">Forward Rate Model</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    ...This is a test!  This is all about the Forward Rate Model
+                    <p>Forward Rate Model</p>
+                    <ul>
+                      <li>forward(what, when)</li>
+                      <li>Ex. f(3,1) = forward rate in three years for one year zero coupon bond</li>
+                      <li>f(3,1) = ( spot (r4) ^4 / spot (r3)^3 ) - 1</li>
+                    </ul>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -302,7 +307,7 @@
                 <ul>
                   <li>Credit Rating (Individuals, Small businesses)</li>
                   <li>Credit Score (Larger Companies, Governments, etc)</li>
-                  <li>Expected return given changes in <strong>credit rating</strong></li>
+                  <li type="button" data-bs-toggle="modal" data-bs-target="#migration">Expected return given changes in <strong>credit rating</strong></li>
                 </ul>
                 
                 <p>Corporate Credit Risk Models</p>
@@ -331,7 +336,7 @@
                   <li>Calc Bond value assuming no default</li>
                   <li>Calc Expected Exposures (* 1- recovery rate) = LGD</li>
                   <li>LGD = (POD * DFn)</li>
-                  <li>Calc Sum for CVA and subtract from bond assuming no default</li>
+                  <li>Calc Sum for CVA and subtract from bond assuming no default (Value no Default, VND)</li>
                   <li>Calc YTM (using I, PMT, PV, FV) and subtract Govt (benchmark) YTM</li>
                   <li>Calc Credit Spread</li>
                 
@@ -395,6 +400,7 @@
                 </div>
               </div>
             </div>
+            
             <!-- Modal Loss Given Default-->
             <div class="modal fade" id="LGD" tabindex="-1" aria-labelledby="LGDLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
@@ -413,7 +419,31 @@
               </div>
             </div>
 
-
+            <!-- Modal Expected Change for credit rating migration-->
+            <div class="modal fade" id="migration" tabindex="-1" aria-labelledby="migrationLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="migrationModalLabel">Expected Change for Credit Rating Migration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ol>
+                      <li>Calculate calculated return per spread migration. ModDur x (Credit Spread at each rating - Credit Spread of
+                        change). </li><ul>
+                          <li>(Ex AA >> AAA = spread AA - spread AAA)</li>
+                        </ul>
+                      <li>Weight each expected return by the probability of each spread migration.</li>
+                      <li>Expected return over next year due to credit spread migration = YTM - weighted expected returns of all migrations
+                      </li>
+                    </ol>                
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
 
