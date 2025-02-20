@@ -79,113 +79,50 @@
     </div>
 
 
-
-
     <div class="container-fluid" id="termstructure" style="height: auto;">
-        <div class="container py-5"  style="height: 100%;">
-            <div  style="height: 95%;">
-                <p class="h2 d-flex justify-content-center">Term Structure and Interest Rate Dynamics</p>
-                
-                
-                <div class="row">
-                  <div class="col-lg">
-                `
-                    <ul>
-                      <li type="button" data-bs-toggle="modal" data-bs-target="#forwardrate">Forward Rate Model</li>
-                      <li>Forward Pricing Model</li>
-                      <li>Spot Rate</li>
-                      <li>Par Rate</li>
-                      <li>Forward Rate</li>
-                      <li>Yield to Maturity</li>
-                      <li>Expected Rate of Return</li>
-                      <li>Shape of Yield Curve</li>
-                    </ul>
-                
-                    <ul>
-                      <li>How to get Zero-coupon rates from par curve (Bootstrapping)</li>
-                      <li>Spot Rates vs Forward Rates</li>
-                      <li>Rolling down the yield curve</li>
-                    </ul>
-                
-                    <ul>
-                      <li>Swap Curve</li>
-                      <li type="button" data-bs-toggle="modal" data-bs-target="#swapspread">Swap Spread</li>
-                    </ul>
-                
-                
-                
-                    <p>Term Structure of Interest Rates</p>
-                    <ul>
-                      <li>Pure Expectations Theory</li>
-                      <li>Local Expectations Theory</li>
-                      <li>Liquidity Preference Theory</li>
-                      <li>Segmented Markets Theory</li>
-                      <li>Preferred Habitat Theory</li>
-                    </ul>
-                
-                
-                
-                  </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="forwardrate" tabindex="-1" aria-labelledby="forwardrateLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="forwardrateLabel">Forward Rate Model</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Forward Rate Model</p>
-                    <ul>
-                      <li>forward(what, when)</li>
-                      <li>Ex. f(3,1) = forward rate in three years for one year zero coupon bond</li>
-                      <li>f(3,1) = ( spot (r4) ^4 / spot (r3)^3 ) - 1</li>
-                    </ul>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="swapspread" tabindex="-1" aria-labelledby="swapspreadLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="swapspreadLabel">Swap Spread</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Swap Spread</p>
+      <div class="container py-5" style="height: 100%;">
+        <div style="height: 95%;">
+          <p class="h2 d-flex justify-content-center">Term Structure and Interest Rate Dynamics</p>
 
 
-                    <div class="row">
-                      <div class="col">
-                          <label for="fixRate" class="form-label">fixRate</label>
-                          <input name="fixRate" id="fixRate" type="text" class="form-control"> 
-          
-                          <label for="govRate" class="form-label">govRate</label>
-                          <input name="govRate" id="govRate" type="text" class="form-control">
-          
-                          <button onclick="swapSpread()" class="btn btn-primary">Calc</button>
-                          <button onclick="swapSpreadClear()" class="btn btn-secondary">Clear</button>
-          
-                      </div>
-                      <div class="col">
-                          <label class="form-label">Results:</label>
-                          <div id="container">
-                          </div>
-                      </div>
-                    </div>
+          <div class="row">
+            <div class="col-lg">
+              `
+              <ul>
+                <li type="button" data-bs-toggle="modal" data-bs-target="#forwardrate">Forward Rate Model</li>
+                <li>Forward Pricing Model</li>
+                <li>Spot Rate</li>
+                <li>Par Rate</li>
+                <li>Forward Rate</li>
+                <li>Yield to Maturity</li>
+                <li>Expected Rate of Return</li>
+                <li>Shape of Yield Curve</li>
+              </ul>
 
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
+              <ul>
+                <li>How to get Zero-coupon rates from par curve (Bootstrapping)</li>
+                <li>Spot Rates vs Forward Rates</li>
+                <li>Rolling down the yield curve</li>
+              </ul>
+
+              <ul>
+                <li>Swap Curve</li>
+                <li type="button" data-bs-toggle="modal" data-bs-target="#swapspread">Swap Spread</li>
+              </ul>
+
+
+
+              <p>Term Structure of Interest Rates</p>
+              <ul>
+                <li>Pure Expectations Theory</li>
+                <li>Local Expectations Theory</li>
+                <li>Liquidity Preference Theory</li>
+                <li>Segmented Markets Theory</li>
+                <li>Preferred Habitat Theory</li>
+              </ul>
+
+
+
             </div>
 
 
@@ -235,15 +172,107 @@
             </div>
 
 
-            </div>
-            </div>
-            
-            <div class="d-flex justify-content-center"  style="  height: 5%;">
-                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
-            </div>
+          </div>
         </div>
+
+        <div class="d-flex justify-content-center" style="  height: 5%;">
+          <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+        </div>
+      </div>
     </div>
 
+
+    <!-- Modal forward rate model-->
+    <div class="modal fade" id="forwardrate" tabindex="-1" aria-labelledby="forwardrateLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="forwardrateLabel">Forward Rate Model</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Forward Rate Model</p>
+            <ul>
+              <li>forward(what, when)</li>
+              <li>Ex. f(3,1) = forward rate in three years for one year zero coupon bond</li>
+              <li>f(3,1) = ( spot (r4) ^4 / spot (r3)^3 ) - 1</li>
+            </ul>
+
+
+
+            <div class="row">
+              <div class="col">
+                  <label for="fRatelong" class="form-label">fRatelong</label>
+                  <input name="fRatelong" id="fRatelong" type="text" class="form-control"> 
+  
+                  <label for="fRatelongT" class="form-label">fRatelongT</label>
+                  <input name="fRatelongT" id="fRatelongT" type="text" class="form-control">
+                  
+                  <label for="fRateshort" class="form-label">fRateshort</label>
+                  <input name="fRateshort" id="fRateshort" type="text" class="form-control"> 
+  
+                  <label for="fRateshortT" class="form-label">fRateshortT</label>
+                  <input name="fRateshortT" id="fRateshortT" type="text" class="form-control">
+  
+                  <button onclick="forwardRateModel()" class="btn btn-primary">Calc</button>
+                  <button onclick="forwardRateModelClear()" class="btn btn-secondary">Clear</button>
+  
+              </div>
+              <div class="col">
+                  <label class="form-label">Results:</label>
+                  <div id="container">
+                  </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Modal swap spread-->
+    <div class="modal fade" id="swapspread" tabindex="-1" aria-labelledby="swapspreadLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="swapspreadLabel">Swap Spread</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Swap Spread</p>
+
+
+            <div class="row">
+              <div class="col">
+                  <label for="fixRate" class="form-label">fixRate</label>
+                  <input name="fixRate" id="fixRate" type="text" class="form-control"> 
+  
+                  <label for="govRate" class="form-label">govRate</label>
+                  <input name="govRate" id="govRate" type="text" class="form-control">
+  
+                  <button onclick="swapSpread()" class="btn btn-primary">Calc</button>
+                  <button onclick="swapSpreadClear()" class="btn btn-secondary">Clear</button>
+  
+              </div>
+              <div class="col">
+                  <label class="form-label">Results:</label>
+                  <div id="container">
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container-fluid" id="arbitrage" style="color: white; background-color: #1F2937; height: 100vh;">
         <div class="container py-5"  style="height: 100%;">

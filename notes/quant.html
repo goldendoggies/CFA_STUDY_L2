@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/images/favicon.ico" type="image/x-icon">
     
+    <script defer src="/notes/quant.js"></script>
+
     <title>Quant</title>
 
 
@@ -78,7 +80,7 @@
 
 
 
-    <div class="container-fluid" id="multiple" style="height: 100vh;">
+    <div class="container-fluid" id="multiple" style="height: auto;">
         <div class="container py-5"  style="  height: 100%;">
             <div  style="height: 95%;">
                 <p class="h2 d-flex justify-content-center">Multiple Variable Regression and Assumptions</p>
@@ -94,6 +96,7 @@
                     </ul>
                     <li>What types of tests would you run to determine the independent variable's usefulness?</li>
                     <ul>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#sig">Significant?</li>
                         <li>F test? Model as a whole?</li>
                         <li>Whole model? </li>
                         <li>Restricted Model?</li>
@@ -105,6 +108,61 @@
             </div>
         </div>
     </div>
+
+
+
+            <!-- Modal significant-->
+            <div class="modal fade" id="sig" tabindex="-1" aria-labelledby="sigLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="sigModalLabel">Are these items significant?</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Hoverable Table</h2>
+                        <p>Move the mouse over the table rows to see the effect.</p>
+                    
+                        <table>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td id="firstHover">Peter</td>
+                            <td>Griffin</td>
+                            <td class="highlight">$100</td>
+                        </tr>
+                        <tr>
+                            <td>Lois</td>
+                            <td class = "highlight">Griffin</td>
+                            <td>$150</td>
+                        </tr>
+                        <tr>
+                            <td>Joe</td>
+                            <td class = "highlight">Swanson</td>
+                            <td>$300</td>
+                        </tr>
+                        <tr>
+                            <td>Cleveland</td>
+                            <td>Brown</td>
+                            <td class = "highlight">$250</td>
+                        </tr>
+                        </table>             
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
 
 
     <div class="container-fluid" id="regression" style="color: white; background-color: #1F2937; height: 100vh;">
