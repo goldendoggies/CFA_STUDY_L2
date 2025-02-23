@@ -12,8 +12,12 @@
     <script defer src="/notes/quant.js"></script>
 
     <title>Quant</title>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        }
 
-
+    </style>
 
 </head>
 <body>
@@ -120,36 +124,48 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h2>Hoverable Table</h2>
+                        <h2>Anova Results</h2>
                         <p>Move the mouse over the table rows to see the effect.</p>
-                    
-                        <table>
+                        
+                        
+
+                        <table style="width:100%">
                         <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Points</th>
+                            <th>-</th>
+                            <th>df</th>
+                            <th>SS</th>
+                            <th>MSS</th>
+                            <th>F-stat</th>
+                            <th>significance F</th>
                         </tr>
                         <tr>
-                            <td id="firstHover">Peter</td>
-                            <td>Griffin</td>
-                            <td class="highlight">$100</td>
+                            <td>Regression</td>
+                            <td>3</td>
+                            <td class="highlight">20.22</td>
+                            <td class="highlightO">6.74</td>
+                            <td class="firstHover">37.44</td>
+                            <td>0.00</td>
                         </tr>
                         <tr>
-                            <td>Lois</td>
-                            <td class = "highlight">Griffin</td>
-                            <td>$150</td>
+                            <td>Residual</td>
+                            <td>100</td>
+                            <td class="highlight">18.32</td>
+                            <td class="highlightO">0.18</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
                         <tr>
-                            <td>Joe</td>
-                            <td class = "highlight">Swanson</td>
-                            <td>$300</td>
-                        </tr>
-                        <tr>
-                            <td>Cleveland</td>
-                            <td>Brown</td>
-                            <td class = "highlight">$250</td>
-                        </tr>
-                        </table>             
+                            <td>Total</td>
+                            <td>103</td>
+                            <td>38.54</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+
+                        </table>  
+                        
+                        <div class="fStat"></div>
+
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
