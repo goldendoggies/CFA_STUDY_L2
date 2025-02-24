@@ -158,12 +158,34 @@
                 <ul>
                     <li>FCFF - Formula using WACC</li>
                     <li>Growth Rate</li>
-                    <li>Discount for Lack of Control (DLOC)</li>
-                    <li>Discount for Lack of Marketability (DLOM) - liquidity</li>
-                    <li>Expanded CAPM</li>
-                    <li>Build-up Method</li>
-
+                    <li>Guideline Transactions Method (GTM): MV of Firm = Adjusted MVIC/EBITDA X Normalized Earnings</li>
                 </ul>
+                
+                <ul>
+                    <li>Public v private valuation differences</li>
+                    <li>Areas of focus for Private company valuation</li>
+                    <li>Cash flow estimations and adjustments to normalize earnings</li>
+                    <li>factor adjustments for esimating discount rates</li>
+                    <li>Compare models used to estimate required rate of return</li>
+                    <ul>
+                        <li>CAPM</li>
+                        <li>Expanded CAPM</li>
+                        <li>Build-up approach</li>
+                    </ul>
+                    <li>Effects of discounts and premiums on valuations</li>
+                    <ul>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#dloc">Discount for Lack of Control (DLOC)</li>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#dlom">Discount for Lack of Marketability (DLOM) - liquidity</li>
+                    </ul>
+                    <li>Additonal approaches to value private companies</li>
+                    <ul>
+                        <li>Why and when to use? How to calc?</li>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#prvincome">Income</li>
+                        <li>Market</li>
+                        <li>Asset-based</li>
+                    </ul>
+                </ul>
+
 
 
                 <p>Please also see <a href="/notes/corp.html#cost">Corporate Finance - Cost of Capital</a></p>
@@ -175,6 +197,91 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+            <!-- Modal significant Discount for Lack of Marketability (DLOM)-->
+            <div class="modal fade" id="dlom" tabindex="-1" aria-labelledby="dlomLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="dlomModalLabel">Discount for Lack of Marketability (DLOM)</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Discount for Lack of Marketability (DLOM)</h2>
+                        <p>Used to discount the valuation</p>
+                        <p>Total Discount = [1 – (1 – DLOC)×(1 – DLOM)]</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- Modal significant Discount for Lack of Control (DLOC)-->
+            <div class="modal fade" id="dloc" tabindex="-1" aria-labelledby="dlocLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="dlocModalLabel">Discount for Lack of Control (DLOC)</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Discount for Lack of Control (DLOC)</h2>
+                        <p>Used to discount the valuation</p>
+                        
+                        <p>DLOC = 1 – [1/(1 + Control premium)]</p>
+                        <p>Total Discount = [1 – (1 – DLOC)×(1 – DLOM)]</p>
+
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              
+            <!-- Modal income based methods-->
+            <div class="modal fade" id="prvincome" tabindex="-1" aria-labelledby="prvincomeLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="prvincomeModalLabel">Income Based Method</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Income Based Method of Valuing Private Equity</h2>
+
+                        
+                        <p>Several steps depending on what information is provided.</p>
+                            <ol>
+                                <li>Calculate working capital (WC * Required return for WC)</li>
+                                <li>Fixed Assets (fixed assets * RR for fixed assets)</li>
+                                <li>Excess Earnings = Normalized Excess Earnings - WC - Fixed Assets</li>
+                                <li>Value of Intangible Assets = Excess Earnings  * 1 + growth of residual earnings/ required return of intangibles - growth rate of residual earnings</li>
+                            </ol>
+
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
 
 
     <nav class="navbar sticky-bottom navbar-light bg-light">
