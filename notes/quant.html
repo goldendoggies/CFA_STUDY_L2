@@ -88,6 +88,20 @@
         <div class="container py-5"  style="  height: 100%;">
             <div  style="height: 95%;">
                 <p class="h2 d-flex justify-content-center">Multiple Variable Regression and Assumptions</p>
+
+
+                <ul>
+                    <li>Types of Investment problems that can be addressed using regression</li>
+                    <li>Formulate a Multiple Regression Model</li>
+                    <ul>
+                        <li>Describe relationship between dependent and independent variables</li>
+                        <li>Interpret Estimated Regression coefficients</li>
+                    </ul>
+                    <li>Underlying Assumptions of multiple regression model</li>
+                </ul>
+
+
+
                 <p>Here are some intial notes from the material.</p>
                 <ul>
                     <li>Working with multiple regression is simple. <strong>Find the independent variables that describe and affect the dependent variable</strong></li>
@@ -100,7 +114,7 @@
                     </ul>
                     <li>What types of tests would you run to determine the independent variable's usefulness?</li>
                     <ul>
-                        <li type="button" data-bs-toggle="modal" data-bs-target="#sig">Significant?</li>
+                        <li>Significant?</li>
                         <li>F test? Model as a whole?</li>
                         <li>Whole model? </li>
                         <li>Restricted Model?</li>
@@ -115,21 +129,79 @@
 
 
 
-            <!-- Modal significant-->
-            <div class="modal fade" id="sig" tabindex="-1" aria-labelledby="sigLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="sigModalLabel">Are these items significant?</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h2>Anova Results</h2>
-                        <p>Move the mouse over the table rows to see the effect.</p>
-                        
-                        
 
-                        <table style="width:100%">
+
+
+
+
+
+
+
+
+    <div class="container-fluid" id="regression" style="color: white; background-color: #1F2937; height: 100vh;">
+        <div class="container py-5"  style="height: 100%;">
+            <div  style="height: 95%;">
+                <p class="h2 d-flex justify-content-center">Regression Model Fit and Results</p>
+
+
+                <ul>
+                    <li type="button" data-bs-toggle="modal" data-bs-target="#fit">How well a multiple regression model explains dependent variable</li>
+                    <li type="button" data-bs-toggle="modal" data-bs-target="#sig">Analyze ANOVA table for goodness of fit</li>
+                    <li>Significance of two or more coefficients in a multiple regression model. Review results of joint hypothesis tests</li>
+                    <li>calculate the estimated value of the dependent variable given a model and assumed values for the independent variables</li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-center"  style="  height: 10%;">
+                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal fit-->
+    <div class="modal fade" id="fit" tabindex="-1" aria-labelledby="fitLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fitModalLabel">How do we know what fits? Is our model any good?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>Goodness of Fit</h2>
+                    <p>These are our primary tools to review the output of our regression results.</p>
+
+                    <ul>
+                        <li>R-squared</li>
+                        <li>Adjusted R-squared</li>
+                        <li>F-test</li>
+                    </ul>
+                    <ul>
+                        <li>Significance of Independent Variables</li>
+                        <li>Issues?</li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal significant-->
+    <div class="modal fade" id="sig" tabindex="-1" aria-labelledby="sigLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sigModalLabel">Are these items significant?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>Anova Results</h2>
+                    <p>Move the mouse over the table rows to see the effect.</p>
+
+
+
+                    <table style="width:100%">
                         <tr>
                             <th>-</th>
                             <th>df</th>
@@ -162,35 +234,19 @@
                             <td>-</td>
                             <td>-</td>
 
-                        </table>  
-                        
-                        <div class="fStat"></div>
+                    </table>
 
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
+                    <div class="fStat"></div>
+
                 </div>
-              </div>
-
-
-
-
-
-
-
-
-    <div class="container-fluid" id="regression" style="color: white; background-color: #1F2937; height: 100vh;">
-        <div class="container py-5"  style="height: 100%;">
-            <div  style="height: 95%;">
-                <p class="h2 d-flex justify-content-center">Regression Model Fit and Results</p>
-            </div>
-            <div class="d-flex justify-content-center"  style="  height: 10%;">
-                <a class="" href="#top" style="color: inherit; opacity: 10%; font-size: 48px; text-decoration: none;">^</a>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
+
+
 
 
     <div class="container-fluid" id="misspecification" style="height: 100vh;">
