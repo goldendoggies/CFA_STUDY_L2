@@ -41,7 +41,7 @@ Then change directory 'cd' to the main project directory, whereever you cloned i
 Hint: In terminal, cd to the location you prefer before issuing the git clone command, such as 'repos'. 
 
 ```bash
-$ git clone git@github.com:goldendoggies/CFA_STUDY_2025.git
+$ git clone git@github.com:goldendoggies/CFA_STUDY_L2.git
 $ cd CFA_STUDY_L2
 ```
 
