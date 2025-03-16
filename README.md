@@ -1,7 +1,7 @@
-# CFA Level 2 - November 2025
+# CFA Level 2
 
 ## Check it out Live!
-https://goldendoggies.github.io/CFA_STUDY_2025/
+https://goldendoggies.github.io/CFA_STUDY_L2/
 
 
 ## Introduction
@@ -42,7 +42,7 @@ Hint: In terminal, cd to the location you prefer before issuing the git clone co
 
 ```bash
 $ git clone git@github.com:goldendoggies/CFA_STUDY_2025.git
-$ cd CFA_STUDY_2025
+$ cd CFA_STUDY_L2
 ```
 
 From terminal, open the index.html file. This should open a browser window on your default web browser and take you to a local instance of the webpage.
@@ -62,10 +62,10 @@ Enjoy!
 4. [X] Links to all home/progress/notes pages
 5. [X] Build in the 'Landing Page' project from ODIN project into this project
 6. [ ] Images of my original notes from GOODNOTES app.
-7. [ ] Add CSS to images and text on my notes pages.
+7. [X] Add CSS to images and text on my notes pages.
 10. [ ] Check buttons and a JS script to tell me 'good job' once all steps have been completed
-11. [ ] Add CSS/JS to hover over parts of table cells/rows/columns as it pertains to the notes. (dynamic /click/hovering/highlighting)
-1. [ ] Make Mobile Friendly, responsive and interactive
+11. [X] Add CSS/JS to hover over parts of table cells/rows/columns as it pertains to the notes. (dynamic /click/hovering/highlighting)
+1. [X] Make Mobile Friendly, responsive and interactive
  
 # Contributing
 
