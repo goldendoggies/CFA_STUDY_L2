@@ -86,12 +86,12 @@
                 <ul>
                     <li type="button" data-bs-toggle="modal" data-bs-target="#bidoffer">Bid/Offer Spread on Currency Quotes and Factors the Affect bid/offer Spread</li>
                     <li type="button" data-bs-toggle="modal" data-bs-target="#triarb">Identify Triangular Arbitrage Opportunities and calculate profit given three currency quotes</li>
-                    <li>Spot and Forward Currency Rates and and calculating the discount or premium</li>
+                    <li type="button" data-bs-toggle="modal" data-bs-target="#discprem">Spot and Forward Currency Rates and and calculating the discount or premium</li>
                     <li type="button" data-bs-toggle="modal" data-bs-target="#mtm">Mark to Market value of forward contract</li>
                     <li>International Parity Conditions</li>
                     <ul>
                         <li>Uncovered Interest Rate Parity</li>
-                        <li>Covered Interest Rate Parity</li>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#cirp">Covered Interest Rate Parity</li>
                         <li>Forward Rate Parity</li>
                         <li>Purchasing Power Parity</li>
                         <li>International Fisher Effect</li>
@@ -126,14 +126,27 @@
             <div class="modal-body">
                 <p>Bid and Offer</p>
 
-                <math>
+                <math display="block">
                     <mfrac>
-                      <mn>Bid</mn>
-                      <mn>Offer</mn>
+                      <ms>Bid</ms>
+                      <ms>Offer</ms>
                     </mfrac>
                 </math>
 
+                <p>or you can think of it like this</p>
+                <math display="block">
+                    <mfrac>
+                      <ms>We are willing to SELL at [this price]</ms>
+                      <ms>We are willing to BUY at [this price]</ms>
+                    </mfrac>
+                </math>
 
+                <p>Factors affecting the bid.offer spreads:</p>
+                <ul>
+                    <li>Time of Day</li>
+                    <li>Currencies involved</li>
+                    <li>Market Participants</li>
+                </ul>
 
             </div>
             <div class="modal-footer">
@@ -165,6 +178,15 @@
                     <li>Dealer Bid  &lt; Internbank Offer</li>
                     <li>Dealer Offer &gt; Interbank Bid</li>
                 </ul>
+
+                <ol>
+                    <li>Compare dealer bid/offer with interbank bid/offer</li>
+                    <li>observe bid and offer on two pairs, find implied cross rate</li>
+                    <ul>
+                        <li>May need to invert the bid and offer to make things comparable</li>
+                        <li>Then multiply bids and offers to find implied cross rate</li>
+                    </ul>
+                </ol>
 
                 <div>
                 <math>
@@ -207,6 +229,120 @@
         </div>
         </div>
 
+
+          <!-- Modal forward discount or premium-->
+    <div class="modal fade" id="discprem" tabindex="-1" aria-labelledby="discpremLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="discpremModalLabel">Forward Discount or Premium</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Forward Discount or Premium is determined by the first part of this equation</p>
+
+
+                <math display="block">
+    
+                    <msub>
+                      <mi>F</mi>
+                      <ms>f/d</ms>
+                    </msub>
+                    <mo>-</mo>
+                    <msub>
+                        <mi>S</mi>
+                        <ms>f/d</ms>
+                      </msub>
+
+                    <mo>=</mo>
+                    <msub>
+                      <mi>S</mi>
+                      <ms>f/d</ms>
+                    </msub>
+                    <mo>(</mo>
+                    <mfrac>
+                
+                      <mrow>
+                        <!-- numerator content grouped in one mrow -->
+                            <ms>Act</ms>
+                            <mo>/</mo>
+                            <mi>360</mi>
+                      </mrow>
+                      
+                      <mrow>
+                        <!-- denominator content grouped in one mrow -->
+                        <mn>1</mn>
+                        <mo>+</mo>
+                        <msub>
+                          <mi>i</mi>
+                          <ms>d</ms>
+                        </msub>
+                        <mrow>
+                          <!-- fenced expression grouped in one mrow -->
+                          <mo>[</mo>
+                          <mrow>
+                            <!-- fenced content grouped in one mrow -->
+                            <ms>Act</ms>
+                            <mo>/</mo>
+                            <mi>360</mi>
+                          </mrow>
+                          <mo>]</mo>
+                        </mrow>
+                      </mrow>
+                    </mfrac>
+                
+                
+                    <mo>)</mo>
+                    <mo>(</mo>
+
+                    <msub>
+                        <mi>i</mi>
+                        <ms>f</ms>
+                      </msub>
+                      <mo>-</mo>
+                      <msub>
+                        <mi>i</mi>
+                        <ms>d</ms>
+                      </msub>
+                      <mo>)</mo>
+
+                  </math>
+    
+                  <p>Spot Rates and Forward points</p>
+
+                  <table style="width:100%">
+                    <tr>
+                        <th>-</th>
+                        <th>df</th>
+
+                    </tr>
+                    <tr>
+                        <td>Regression</td>
+                        <td>3</td>
+
+                    </tr>
+                    <tr>
+                        <td>Residual</td>
+                        <td>100</td>
+
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>103</td>
+
+
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+
         <!-- Modal mtm-->
     <div class="modal fade" id="mtm" tabindex="-1" aria-labelledby="mtmLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -218,6 +354,12 @@
             <div class="modal-body">
                 <p>Mark to market of Forward currency rates</p>
 
+                <ol>
+                    <li>Enter forward into offsetting position</li>
+                    <li>Add or subtract forward points appropriately to extrage rate</li>
+                    <li>subtract forward rate at initiation from forward offsetting rate, then multiply by notional amount</li>
+                    <li>Take result from forward mark to market and discount back to initiation using appropriate currency's discount rate</li>
+                </ol>
                 <div class="tl-container">
   
                     <div class="tl-top">
@@ -244,6 +386,109 @@
             </div>
         </div>
         </div>
+
+
+ <!-- Modal CIRP-->
+ <div class="modal fade" id="cirp" tabindex="-1" aria-labelledby="cirpLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="cirpModalLabel">Covered Interest Rate Parity</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Covered Interest Rate Parity</p>
+
+ 
+            <math display="block">
+    
+                <msub>
+                  <mi>F</mi>
+                  <ms>f/d</ms>
+                </msub>
+                <mo>=</mo>
+                <msub>
+                  <mi>S</mi>
+                  <ms>f/d</ms>
+                </msub>
+                <mo>(</mo>
+                <mfrac>
+            
+                  <mrow>
+                    <!-- numerator content grouped in one mrow -->
+                    <mn>1</mn>
+                    <mo>+</mo>
+                    <msub>
+                      <mi>i</mi>
+                      <ms>f</ms>
+                    </msub>
+                    <mrow>
+                      <!-- fenced expression grouped in one mrow -->
+                      <mo>[</mo>
+                      <mrow>
+                        <!-- fenced content grouped in one mrow -->
+                        <ms>Act</ms>
+                        <mo>/</mo>
+                        <mi>360</mi>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                  </mrow>
+                  
+                  
+                  <mrow>
+                    <!-- denominator content grouped in one mrow -->
+                    <mn>1</mn>
+                    <mo>+</mo>
+                    <msub>
+                      <mi>i</mi>
+                      <ms>d</ms>
+                    </msub>
+                    <mrow>
+                      <!-- fenced expression grouped in one mrow -->
+                      <mo>[</mo>
+                      <mrow>
+                        <!-- fenced content grouped in one mrow -->
+                        <ms>Act</ms>
+                        <mo>/</mo>
+                        <mi>360</mi>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                  </mrow>
+                </mfrac>
+            
+            
+                <mo>)</mo>
+            
+              </math>
+
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="container-fluid" id="econg" style="color: white; background-color: #1F2937; height: 100vh;">
