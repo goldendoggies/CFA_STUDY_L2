@@ -90,18 +90,18 @@
                     <li type="button" data-bs-toggle="modal" data-bs-target="#mtm">Mark to Market value of forward contract</li>
                     <li>International Parity Conditions</li>
                     <ul>
-                        <li>Uncovered Interest Rate Parity</li>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#uirp">Uncovered Interest Rate Parity</li>
                         <li type="button" data-bs-toggle="modal" data-bs-target="#cirp">Covered Interest Rate Parity</li>
                         <li>Forward Rate Parity</li>
-                        <li>Purchasing Power Parity</li>
-                        <li>International Fisher Effect</li>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#ppp">Purchasing Power Parity</li>
+                        <li type="button" data-bs-toggle="modal" data-bs-target="#fisher">International Fisher Effect</li>
                     </ul>
                     <li>Relationship among international parity conditions</li>
                     <li>Forecast Future Spot rates using spot rates, forward rates, ppp and UIRP</li>
-                    <li>Factors affecting Long run fair value of exchange rates</li>
+                    <li type="button" data-bs-toggle="modal" data-bs-target="#longrunforex">Factors affecting Long run fair value of exchange rates</li>
                     <li>Carry Trade and relation to UIRP, calculate profit from a carry trade</li>
-                    <li>Flows in the balance of payments account affect currency exchange rates</li>
-                    <li>Effects of Monetary and Fiscal Policy on exchange rates</li>
+                    <li type="button" data-bs-toggle="modal" data-bs-target="#acctflows">Flows in the balance of payments account affect currency exchange rates</li>
+                    <li type="button" data-bs-toggle="modal" data-bs-target="#monfisc">Effects of Monetary and Fiscal Policy on exchange rates</li>
                     <li>Central Bank and Government Intervention and Capital Controls objectives and Effectiveness of capital controls</li>
                     <li>Currency Crisis</li>
                 </ul>
@@ -136,8 +136,8 @@
                 <p>or you can think of it like this</p>
                 <math display="block">
                     <mfrac>
-                      <ms>We are willing to SELL at [this price]</ms>
-                      <ms>We are willing to BUY at [this price]</ms>
+                      <ms>Dealer willing to SELL at [this price]</ms>
+                      <ms>Dealer willing to BUY at [this price]</ms>
                     </mfrac>
                 </math>
 
@@ -389,6 +389,28 @@
 
 
  <!-- Modal CIRP-->
+ <div class="modal fade" id="uirp" tabindex="-1" aria-labelledby="uirpLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="uirpModalLabel">Uncovered Interest Rate Parity</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Uncovered Interest Rate Parity</p>
+            <p>Interest rate differentials will drive exchange rate (But it actually doest now)</p>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+ <!-- Modal CIRP-->
  <div class="modal fade" id="cirp" tabindex="-1" aria-labelledby="cirpLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -398,7 +420,7 @@
         </div>
         <div class="modal-body">
             <p>Covered Interest Rate Parity</p>
-
+            <p>Int rate differnetials but bc of arbitrage it must hold. Poor predicter of future spot rate.</p>
  
             <math display="block">
     
@@ -474,6 +496,201 @@
     </div>
 
 
+    <!-- Modal Purchasing Power Parity-->
+ <div class="modal fade" id="ppp" tabindex="-1" aria-labelledby="pppLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="pppModalLabel">Purchasing Power Parity (PPP)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+          <p>Reflects the relationship between foreign exchange rates and inflation differentials</p>
+          <p>Law of one price - same good in different countries should be same price when priced by common currency</p>
+          <P>Inflation differentials across contries cause nominal foreign exchange rates to adjust to equate real purchasing power (CPI) in the long run</P>
+          <P>Absolute Purchasing Power Parity</P>
+          <ul>
+            <li>Observed at the general price level - Not specific Good(s)</li>
+            <li>Assumption: Price indices are identical - Same goods and services and same weights</li>
+            <ul>
+              <li>Either goods are different or weights are different</li>
+            </ul>
+            <li>Highly Unlikely to hold</li>
+          </ul>
+
+          <p>Relative PPP</p>
+          <ul>
+            <li>costs are constant over time</li>
+            <li>Generally: changes in foreign currency rate = inflation differential</li>
+          </ul>
+
+          <p>Ex-Ante PPP</p>
+          <ul>
+            <li>Expected changes in spot foreign exchange rates are driven by the expected differences in inflation rates</li>
+          </ul>
+
+
+
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      </div>
+  </div>
+  </div>
+    <!-- Modal International Fisher Effect-->
+ <div class="modal fade" id="fisher" tabindex="-1" aria-labelledby="fisherLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="fisher">International Fisher Effect</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+          <p>Combines the currency foreign currency rate differentials and inflation rate differentials</p>
+          
+
+
+
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      </div>
+  </div>
+  </div>
+  
+    <!-- Modal Affecting Long Run Forex-->
+ <div class="modal fade" id="longrunforex" tabindex="-1" aria-labelledby="longrunforexLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="longrunforex">Affecting Long Run Forex</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <p>IMF takes three approaches on interest rate assement of fair value. Separate from parity conditions.</p>
+        <p>Dealing with the CURRNET ACCOUNT and the CAPITAL ACCOUNT in a country</p>
+          <p>Macroeconomic Balance Approach</p>
+          <ul>
+            <li>estimate how much interest rates need to adjust to close the gap between </li>
+              <ul>
+                <li>current account imbalance</li>
+                <li>and its long term sustainable current account imbalance</li>
+              </ul>
+              <li>focus on 'real' flows</li>
+          </ul>
+
+
+          <p>External sustainability Approach - deals with capital account</p>
+
+          <ul>
+          <li>Must have some sustainable level of</li>
+          <ul>
+            <li>net foreign assets/GDP</li>
+            <li>net foreign liability/GDP</li>
+          </ul>
+          <li>focus on 'financial' flows</li>
+        </ul>
+          
+        <p>Reduced Form Econometric Model</p>
+        <ul>
+          <li>Focus on trends of macro variables to estimate equilibrium path for currency</li>
+          <ul>
+            <li>net foreign assets positions</li>
+            <li>terms of trade</li>
+            <li>relative productivity</li>
+          </ul>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      </div>
+  </div>
+  </div>
+
+
+    <!-- Modal Flows and Accounts-->
+ <div class="modal fade" id="acctflows" tabindex="-1" aria-labelledby="acctflowsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="acctflows">Current and Capital Accounts Flows and Affects on Currency</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <p>Impact on flows from real flows (current account) and financial flows (capital account) on the currency exchange rate</p>
+
+        <p>Current Account</p>
+        <ul>
+          <li>Sum of all recorded transactions in traded goods, services, income and net transfer payments</li>
+          <li>Persistent Current Account surplus = currency appreciates over time</li>
+          <li>Persistent Current Account deficit = currency depreciatation over time</li>
+        </ul>
+
+        <ol>
+          <li>Flow Supply/Demand Channel</li>
+          <li>Portfolio Balance Channel</li>
+          <li>Debt Sustainability Channel</li>
+        </ol>
+
+
+        <p>Capital Account</p>
+        <ul>
+          <li>Investment/financing flows are dominant factor in determining currency exchange rate movements (in short to medium term)</li>
+          <li>These flows occur more rapidly and affect more currnecies more quickly.</li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      </div>
+  </div>
+  </div>
+
+    <!-- Modal Monetary and Fiscal Policy and Affects on Exchange Rates-->
+ <div class="modal fade" id="monfisc" tabindex="-1" aria-labelledby="monfiscLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="monfisc">Monetary and Fiscal Policy and Affects on Exchange Rates</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Mundell-Fleming Model</p>
+
+
+        <p>Expansionary</p>
+        <p>Monetary Policy</p>
+        <ul>
+          <li>reduce interest rates</li>
+          <li>increase investment, consuption spending</li>
+          <li>leads to capital outflows</li>
+          <li>downwards pressure on exchange rates</li>
+        </ul>
+        <p>Fiscal Policy</p>
+        <ul>
+          <li>Increase spending</li>
+          <li>lower taxes</li>
+          <li>upwards pressure on interesst rates</li>
+          <li>leads to capital inflows</li>
+          <li>upwards pressure on exchange rates</li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      </div>
+  </div>
+  </div>
 
 
 
