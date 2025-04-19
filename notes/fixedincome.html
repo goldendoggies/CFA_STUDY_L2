@@ -360,7 +360,7 @@
                 <p>The Credit Valuation Adjustment is used to determine the adjustment for credit risk (Credit Spread)</p>
                 <ul>
                   
-                  <li><strong>Expected exposure</strong> (Amount that could be lost in default without considering any recovery)</li>
+                  <li type="button" data-bs-toggle="modal" data-bs-target="#expexpos"><strong>Expected exposure</strong> (Amount that could be lost in default without considering any recovery)</li>
                   <li>Credit Spread (G-spread) which is Corporate minus Govt (or benchmark) bond</li>
                   <li>Default Risk (Probability of Default - POD)</li>
                   <li>Default Risk Premium (Uncertainty of timing of default)</li>
@@ -384,14 +384,14 @@
                 
                 <p>Corporate Credit Risk Models</p>
                 <ul>
-                  <li>Structural Model</li>
+                  <li type="button" data-bs-toggle="modal" data-bs-target="#structural">Structural Model</li>
                   <ul>
                     <li>Assumptions</li>
                     <li>Strengths</li>
                     <li>Weaknesses</li>
                   </ul>
                 
-                  <li>Reduced Form Model</li>
+                  <li type="button" data-bs-toggle="modal" data-bs-target="#redform">Reduced Form Model</li>
                   <ul>
                     <li>Assumptions</li>
                     <li>Strengths</li>
@@ -424,7 +424,23 @@
     </div>
 
 
-
+            <!-- Modal expected exposure-->
+            <div class="modal fade" id="expexpos" tabindex="-1" aria-labelledby="expexposLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="expexposModalLabel">Expected Exposure</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>expected exposure = COUPON + (Bond Price at T * Probability of that node) + (Bond price at T * Probability of that node) ...</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- Modal expected loss-->
             <div class="modal fade" id="pvexploss" tabindex="-1" aria-labelledby="pvexplossLabel" aria-hidden="true">
@@ -517,9 +533,45 @@
               </div>
             </div>
 
+            <!-- Modal Structural Model-->
+            <div class="modal fade" id="structural" tabindex="-1" aria-labelledby="structuralLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="structuralModalLabel">Structural Model</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                      <li>Treats defaukts as an endogeneos event</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-
-
+            <!-- Modal Reduced Form Model-->
+            <div class="modal fade" id="redform" tabindex="-1" aria-labelledby="redformLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="redformModalLabel">Reduced Form Model</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                      <li>Can model default risk intensity by using refression analysis on company specific variables (leverage, cash ratios) and macroeconomic variable (unemployment, gdp, stock market volatility).</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
 
