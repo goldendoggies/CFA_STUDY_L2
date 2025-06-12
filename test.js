@@ -96,3 +96,13 @@ showFormula.appendChild(math);
 //  button2.addEventListener('click', () => handleClicks('button2'));
 //  button3.addEventListener('click', () => handleClicks('button3'));
  
+function interBank () {
+   const firstInterBank = document.querySelector('#firstInterBank')
+   const secondInterBank = document.querySelector('.secondInterBank')
+   const thirdInterBank = document.querySelector('.thirdInterBank')
+   const results = firstInterBank.value // do actual calculation
+
+   console.log(results)
+   console.log(secondInterBank)
+   console.log(thirdInterBank)
+};
